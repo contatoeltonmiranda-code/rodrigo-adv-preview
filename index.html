@@ -609,23 +609,38 @@
     }
     .why-us .section-title { color: #fff; }
     .why-us .section-label { color: var(--blue-light); }
+    @keyframes neonPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(0,127,235,0.3), 0 0 60px rgba(0,127,235,0.1), inset 0 0 20px rgba(0,127,235,0.05); }
+      50% { box-shadow: 0 0 30px rgba(0,127,235,0.5), 0 0 80px rgba(0,127,235,0.2), inset 0 0 30px rgba(0,127,235,0.08); }
+    }
+    @keyframes borderRotate {
+      0% { --angle: 0deg; }
+      100% { --angle: 360deg; }
+    }
     .why-layout {
       display: grid;
-      grid-template-columns: 340px 1fr;
+      grid-template-columns: 420px 1fr;
       gap: 56px;
       align-items: start;
     }
     .why-photo {
-      border-radius: var(--radius);
-      overflow: hidden;
       position: sticky;
       top: 100px;
+      padding: 4px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--blue), rgba(0,127,235,0.2), var(--blue-light), rgba(0,127,235,0.2), var(--blue));
+      background-size: 300% 300%;
+      animation: neonPulse 3s ease-in-out infinite, gradientShift 4s ease-in-out infinite;
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     .why-photo img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: var(--radius);
+      border-radius: calc(var(--radius) - 4px);
     }
     .why-items {
       display: flex;
@@ -821,7 +836,7 @@
       .bento-grid { grid-template-columns: 1fr; }
       .bento-card-wide { grid-column: span 1; flex-direction: column; gap: 20px; text-align: center; }
       .why-layout { grid-template-columns: 1fr; gap: 40px; }
-      .why-photo { position: static; max-width: 340px; margin: 0 auto; }
+      .why-photo { position: static; max-width: 380px; margin: 0 auto; }
       .faq-split { grid-template-columns: 1fr; gap: 40px; }
       .faq-left { position: static; }
       .section-title { font-size: 36px; }
