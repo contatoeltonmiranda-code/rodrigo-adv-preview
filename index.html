@@ -137,17 +137,127 @@
       transform: translateY(-3px);
     }
 
-    /* ===== HERO (IMAGE ONLY) ===== */
+    /* ===== HERO ===== */
     .hero {
       background: var(--dark);
-      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       position: relative;
       overflow: hidden;
     }
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/hero-bg.jpg') center right / cover no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10,10,11,0.92) 0%, rgba(10,10,11,0.75) 50%, rgba(10,10,11,0.3) 100%);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+    }
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 520px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+    }
+    .hero-subtitle strong {
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+    .hero-buttons {
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+    }
+
+    /* ===== INTRO (NOVA SECAO) ===== */
+    .intro {
+      background: #fff;
+      padding: 80px 0;
+      position: relative;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .intro .container {
+      max-width: 900px;
+    }
+    .intro-content {
+      text-align: center;
+    }
+    .intro-content p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .intro-content p:first-child {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .intro-checks {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .intro-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .intro-check svg {
+      flex-shrink: 0;
     }
 
     /* ===== SECTIONS COMMON ===== */
@@ -661,6 +771,13 @@
 
     /* ===== RESPONSIVO ===== */
     @media (max-width: 900px) {
+      .hero { min-height: 80vh; }
+      .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
+      .hero-bg::after { background: linear-gradient(90deg, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.8) 100%); }
+      .hero-badges { flex-wrap: wrap; }
+      .intro { padding: 60px 0; }
+      .intro-content p:first-child { font-size: 20px; }
+      .intro-checks { gap: 20px; }
       .ps-layout { grid-template-columns: 1fr; }
       .timeline::before { left: 28px; }
       .bento-grid { grid-template-columns: 1fr; }
@@ -682,9 +799,46 @@
 </head>
 <body>
 
-  <!-- HERO (IMAGEM PRANCHETA-2) -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="images/Prancheta-2.png" alt="VMA Advogados - Abertura de empresa em Portugal com seguranca juridica">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="hero-badge">Advocacia Empresarial</span>
+          <span class="hero-badge">Lisboa</span>
+        </div>
+        <h1>Abertura de empresa<br>em Portugal com<br><span class="gradient-text">seguranca juridica</span></h1>
+        <p class="hero-subtitle">Assessoria especializada em Lisboa para estruturar sua empresa com protecao societaria e conformidade total com o <strong>Registo Comercial e RCBE</strong>.</p>
+        <div class="hero-buttons">
+          <a href="#cta-final" class="btn-primary">Falar com um Advogado Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-content reveal">
+        <p>Abrir empresa em Portugal e uma decisao estrategica.</p>
+        <p>Mas a forma como ela nasce define o nivel de protecao que voce tera nos proximos anos.<br>Aqui, sua empresa e estruturada com contrato personalizado, definicao correta do tipo societario e enquadramento juridico adequado desde o primeiro ato.</p>
+        <div class="intro-checks">
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem improviso.
+          </span>
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem clausulas genericas.
+          </span>
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem riscos desnecessarios.
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- PROBLEMA E SOLUCAO -->
