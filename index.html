@@ -140,11 +140,12 @@
     /* ===== HERO ===== */
     .hero {
       background: var(--dark);
-      min-height: 50vh;
+      min-height: 70vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+      padding: 80px 0;
     }
     .hero-bg {
       position: absolute;
@@ -154,8 +155,9 @@
     .hero .container {
       position: relative;
       z-index: 2;
-      max-width: 100%;
-      padding: 0 0 0 80px;
+      max-width: 1200px;
+      margin: 0;
+      padding: 0 24px 0 60px;
     }
     .hero-content {
       max-width: 550px;
@@ -769,9 +771,9 @@
 
     /* ===== RESPONSIVO ===== */
     @media (max-width: 900px) {
-      .hero { min-height: 50vh; }
+      .hero { min-height: auto; padding: 60px 0; }
       .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
-      .hero .container { padding: 0 24px; }
+      .hero .container { padding: 0 24px; margin: 0; }
       .hero-badges { flex-wrap: wrap; }
       .intro { padding: 60px 0; }
       .intro-content p:first-child { font-size: 20px; }
