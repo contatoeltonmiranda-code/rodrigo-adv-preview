@@ -243,7 +243,7 @@
     }
     .intro-content p:first-child {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--text-primary);
       letter-spacing: -0.5px;
       margin-bottom: 20px;
@@ -321,7 +321,7 @@
     .ps-side.solution .ps-side-label { color: var(--green); }
     .ps-side h3 {
       font-size: 26px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.8px;
       margin-bottom: 28px;
       line-height: 1.2;
@@ -426,7 +426,7 @@
     .timeline-content { padding-top: 12px; }
     .timeline-content h3 {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: -0.3px;
       margin-bottom: 8px;
       color: #fff;
@@ -489,7 +489,7 @@
     }
     .bento-card h3 {
       font-size: 22px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -0.5px;
       margin-bottom: 20px;
     }
@@ -609,27 +609,43 @@
     }
     .why-us .section-title { color: #fff; }
     .why-us .section-label { color: var(--blue-light); }
-    .why-strip {
+    .why-layout {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
+      grid-template-columns: 340px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .why-photo {
       border-radius: var(--radius);
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
+      position: sticky;
+      top: 100px;
+    }
+    .why-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+    }
+    .why-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
     .why-item {
-      padding: 44px 28px;
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
       transition: background 0.4s;
-      position: relative;
     }
-    .why-item:last-child { border-right: none; }
     .why-item:hover { background: rgba(255,255,255,0.03); }
     .why-icon-wrap {
+      flex-shrink: 0;
       width: 52px;
       height: 52px;
-      margin: 0 auto 20px;
       background: rgba(0,127,235,0.1);
       border-radius: 14px;
       display: flex;
@@ -644,11 +660,17 @@
     .why-icon-wrap svg { width: 24px; height: 24px; color: var(--blue); transition: color 0.4s; }
     .why-item:hover .why-icon-wrap svg { color: #fff; }
     .why-item h4 {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 16px;
+      font-weight: 900;
       letter-spacing: -0.2px;
       line-height: 1.4;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 4px;
+    }
+    .why-item-text p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
     }
     .why-footer-text { text-align: center; margin-top: 56px; }
     .why-footer-text p {
@@ -658,7 +680,7 @@
     }
     .why-footer-text strong {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 900;
       color: #fff;
     }
 
@@ -771,8 +793,17 @@
     .footer {
       background: var(--dark);
       border-top: 1px solid rgba(255,255,255,0.04);
-      padding: 28px 0;
+      padding: 40px 0 28px;
       text-align: center;
+    }
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 16px;
+      filter: invert(1);
+    }
+    .footer-logo img {
+      height: 50px;
+      width: auto;
     }
     .footer p { font-size: 13px; color: rgba(255,255,255,0.3); }
 
@@ -789,18 +820,15 @@
       .timeline::before { left: 28px; }
       .bento-grid { grid-template-columns: 1fr; }
       .bento-card-wide { grid-column: span 1; flex-direction: column; gap: 20px; text-align: center; }
-      .why-strip { grid-template-columns: repeat(2, 1fr); }
-      .why-item:nth-child(5) { grid-column: span 2; }
+      .why-layout { grid-template-columns: 1fr; gap: 40px; }
+      .why-photo { position: static; max-width: 340px; margin: 0 auto; }
       .faq-split { grid-template-columns: 1fr; gap: 40px; }
       .faq-left { position: static; }
       .section-title { font-size: 36px; }
       .final-cta .section-title { font-size: 36px; }
     }
     @media (max-width: 600px) {
-      .why-strip { grid-template-columns: 1fr; }
-      .why-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-      .why-item:last-child { border-bottom: none; }
-      .why-item:nth-child(5) { grid-column: span 1; }
+      .why-photo { max-width: 280px; }
     }
   </style>
 </head>
@@ -1052,36 +1080,56 @@
         <p class="section-label">Diferenciais</p>
         <h2 class="section-title" style="color:#fff;">Por que nos escolher?</h2>
       </div>
-      <div class="why-strip reveal-scale">
-        <div class="why-item">
-          <div class="why-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <h4>Escrit&oacute;rio f&iacute;sico em Lisboa</h4>
+      <div class="why-layout">
+        <div class="why-photo reveal">
+          <img src="images/expert.jpg" alt="Dr. Rodrigo Maranh&atilde;o — Advogado em Lisboa">
         </div>
-        <div class="why-item">
-          <div class="why-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <div class="why-items">
+          <div class="why-item reveal reveal-delay-1">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Escrit&oacute;rio f&iacute;sico em Lisboa</h4>
+              <p>Presen&ccedil;a local para resolver quest&otilde;es presenciais com agilidade.</p>
+            </div>
           </div>
-          <h4>Atendimento personalizado e pr&oacute;ximo</h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div class="why-item reveal reveal-delay-2">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Atendimento personalizado e pr&oacute;ximo</h4>
+              <p>Cada cliente recebe aten&ccedil;&atilde;o individual e comunica&ccedil;&atilde;o direta.</p>
+            </div>
           </div>
-          <h4>Experi&ecirc;ncia com empresas e investidores estrangeiros</h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <div class="why-item reveal reveal-delay-3">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Experi&ecirc;ncia com empresas e investidores estrangeiros</h4>
+              <p>Conhecimento pr&aacute;tico em opera&ccedil;&otilde;es internacionais e imigra&ccedil;&atilde;o empresarial.</p>
+            </div>
           </div>
-          <h4>Riscos jur&iacute;dicos mitigados desde a constitui&ccedil;&atilde;o</h4>
-        </div>
-        <div class="why-item">
-          <div class="why-icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <div class="why-item reveal reveal-delay-4">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Riscos jur&iacute;dicos mitigados desde a constitui&ccedil;&atilde;o</h4>
+              <p>Estrutura&ccedil;&atilde;o preventiva para evitar problemas futuros.</p>
+            </div>
           </div>
-          <h4>Condu&ccedil;&atilde;o estrat&eacute;gica em todas as etapas</h4>
+          <div class="why-item reveal reveal-delay-4">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Condu&ccedil;&atilde;o estrat&eacute;gica em todas as etapas</h4>
+              <p>Acompanhamento completo do in&iacute;cio ao funcionamento da empresa.</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="why-footer-text reveal">
@@ -1157,6 +1205,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-logo"><img src="images/logo.png" alt="Rodrigo Maranh&atilde;o Advogado"></div>
       <p>VMA Advogados &mdash; Todos os direitos reservados.</p>
     </div>
   </footer>
