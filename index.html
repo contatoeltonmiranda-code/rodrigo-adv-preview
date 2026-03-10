@@ -151,19 +151,14 @@
       inset: 0;
       background: url('images/hero-bg.jpg') center right / cover no-repeat;
     }
-    .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(10,10,11,0.92) 0%, rgba(10,10,11,0.75) 50%, rgba(10,10,11,0.3) 100%);
-    }
     .hero .container {
       position: relative;
       z-index: 2;
       max-width: 1200px;
+      padding: 0 80px;
     }
     .hero-content {
-      max-width: 600px;
+      max-width: 550px;
     }
     .hero-badges {
       display: flex;
@@ -773,7 +768,7 @@
     @media (max-width: 900px) {
       .hero { min-height: 80vh; }
       .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
-      .hero-bg::after { background: linear-gradient(90deg, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.8) 100%); }
+      .hero .container { padding: 0 24px; }
       .hero-badges { flex-wrap: wrap; }
       .intro { padding: 60px 0; }
       .intro-content p:first-child { font-size: 20px; }
