@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitui&ccedil;&atilde;o de Empresa em Portugal com Advogado em Lisboa</title>
+  <meta name="description" content="Assessoria jur&iacute;dica completa para abertura de empresas em Portugal com contrato personalizado, prote&ccedil;&atilde;o societ&aacute;ria e registo correto no Registo Comercial e RCBE.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #007FEB;
+      --blue-light: #4DA3F0;
+      --green: #03B01E;
+      --green-hover: #029a18;
+      --dark: #DAD7D1;
+      --dark-2: #D0CDC7;
+      --dark-3: #C8C5BF;
+      --off-white: #F5F5F7;
+      --card-bg: rgba(255,255,255,0.6);
+      --card-border: rgba(0,0,0,0.06);
+      --text-primary: #1D1D1F;
+      --text-secondary: #86868B;
+      --radius: 24px;
+      --radius-btn: 50px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--off-white);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== BODY TEXT STANDARD ===== */
+    p, li, .faq-answer, .t-card p, .bento-list li, .ps-list li, .timeline-content p, .bento-card-wide p, .why-footer-text p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      padding: 18px 40px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(255,255,255,0.12), transparent);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(3,176,30,0.35);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: #fff;
+      padding: 18px 40px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.4);
+      transform: translateY(-3px);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('images/hero-bg.jpg') center right / cover no-repeat;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0;
+      padding: 0 24px 0 400px;
+    }
+    .hero-content {
+      max-width: 550px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 520px;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+    }
+    .hero-subtitle strong {
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+    .hero-buttons {
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+    }
+
+    /* ===== INTRO (NOVA SECAO) ===== */
+    .intro {
+      background: var(--off-white);
+      padding: 80px 0;
+      position: relative;
+    }
+    .intro .container {
+      max-width: 1060px;
+    }
+    .intro-content {
+      text-align: center;
+      background: #fff;
+      padding: 56px 48px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .intro-content p {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .intro-content p:first-child {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .intro-checks {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .intro-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .intro-check svg {
+      flex-shrink: 0;
+    }
+
+    /* ===== SECTIONS COMMON ===== */
+    section { padding: 60px 0; }
+    .hero { padding: 0; }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-header .section-subtitle { margin: 0 auto; }
+
+    /* ===== PROBLEMA / SOLUCAO ===== */
+    .problem-solution { background: var(--off-white); overflow: hidden; }
+    .ps-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 40px rgba(0,0,0,0.06);
+    }
+    .ps-side { padding: 56px 48px; }
+    .ps-side.problem { background: var(--dark); color: #fff; }
+    .ps-side.solution { background: #fff; }
+    .ps-side-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 16px;
+    }
+    .ps-side.problem .ps-side-label { color: #ff6b6b; }
+    .ps-side.solution .ps-side-label { color: var(--green); }
+    .ps-side h3 {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.8px;
+      margin-bottom: 28px;
+      line-height: 1.2;
+    }
+    .ps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .ps-list li {
+      font-size: 15px;
+      padding-left: 32px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .ps-list li::before {
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .ps-side.problem .ps-list li { color: rgba(255,255,255,0.65); }
+    .ps-side.problem .ps-list li::before { content: '\2717'; color: #ff6b6b; }
+    .ps-side.solution .ps-list li { color: var(--text-secondary); }
+    .ps-side.solution .ps-list li::before { content: '\2713'; color: var(--green); }
+    .ps-note {
+      font-size: 13px;
+      margin-top: 24px;
+      opacity: 0.5;
+      font-style: italic;
+    }
+    .ps-cta-row {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ===== PROCESSO — TIMELINE ===== */
+    .process {
+      background: var(--dark);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .process::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 800px;
+      height: 800px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0,127,235,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .process .section-title { color: #fff; }
+    .process .section-subtitle { color: rgba(255,255,255,0.5); }
+    .process .section-label { color: var(--blue-light); }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--blue), rgba(0,127,235,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 36px;
+      padding-bottom: 48px;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      background: var(--dark-3);
+      border: 2px solid var(--blue);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--blue);
+      position: relative;
+      z-index: 2;
+      transition: all 0.4s;
+    }
+    .timeline-item:hover .timeline-dot {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 0 30px rgba(0,127,235,0.3);
+    }
+    .timeline-content { padding-top: 12px; }
+    .timeline-content h3 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .timeline-content p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+    .process-cta { text-align: center; margin-top: 64px; }
+    .process-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ===== TIPOS SOCIEDADE — BENTO ===== */
+    .types { background: var(--off-white); }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+    .bento-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 44px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .bento-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    }
+    .bento-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .bento-card:hover::after { opacity: 1; }
+    .bento-card .type-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--blue);
+      background: rgba(0,127,235,0.08);
+      padding: 6px 14px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .bento-card h3 {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .bento-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .bento-list li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding-left: 28px;
+      position: relative;
+    }
+    .bento-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+      opacity: 0.5;
+    }
+    .bento-card-wide {
+      grid-column: span 3;
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-3) 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 48px;
+    }
+    .bento-card-wide:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+    .bento-card-wide::after { display: none; }
+    .bento-card-wide p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      max-width: 500px;
+    }
+
+    /* ===== SOCIAL PROOF / DEPOIMENTOS ===== */
+    .testimonials {
+      background: var(--off-white);
+      position: relative;
+    }
+    .testimonial-marquee {
+      display: flex;
+      gap: 24px;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    }
+    .testimonial-track {
+      display: flex;
+      gap: 24px;
+      animation: marquee 30s linear infinite;
+    }
+    .t-card {
+      flex-shrink: 0;
+      width: 380px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 32px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .t-card-quote {
+      font-size: 32px;
+      color: var(--blue);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .t-card p {
+      font-size: 15px;
+      color: var(--text-primary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .t-card-author { display: flex; align-items: center; gap: 14px; }
+    .t-card-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+    .t-card-avatar.av-1 { background: var(--blue); }
+    .t-card-avatar.av-2 { background: #8B5CF6; }
+    .t-card-avatar.av-3 { background: var(--green); }
+    .t-card-name { font-weight: 600; font-size: 14px; }
+    .t-card-role { font-size: 12px; color: var(--text-secondary); }
+
+    /* ===== POR QUE ESCOLHER ===== */
+    .why-us {
+      background: var(--dark);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-us::before {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      right: -200px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(0,127,235,0.06);
+      filter: blur(100px);
+    }
+    .why-us .section-title { color: #fff; }
+    .why-us .section-label { color: var(--blue-light); }
+    @keyframes neonPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(0,127,235,0.3), 0 0 60px rgba(0,127,235,0.1), inset 0 0 20px rgba(0,127,235,0.05); }
+      50% { box-shadow: 0 0 30px rgba(0,127,235,0.5), 0 0 80px rgba(0,127,235,0.2), inset 0 0 30px rgba(0,127,235,0.08); }
+    }
+    @keyframes borderRotate {
+      0% { --angle: 0deg; }
+      100% { --angle: 360deg; }
+    }
+    .why-layout {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .why-photo {
+      position: sticky;
+      top: 100px;
+      padding: 1px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--blue), rgba(0,127,235,0.2), var(--blue-light), rgba(0,127,235,0.2), var(--blue));
+      background-size: 300% 300%;
+      animation: neonPulse 3s ease-in-out infinite, gradientShift 4s ease-in-out infinite;
+    }
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .why-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: calc(var(--radius) - 1px);
+    }
+    .why-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.4s;
+    }
+    .why-item:hover { background: rgba(255,255,255,0.03); }
+    .why-icon-wrap {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: rgba(0,127,235,0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s;
+    }
+    .why-item:hover .why-icon-wrap {
+      background: var(--blue);
+      transform: scale(1.1);
+    }
+    .why-icon-wrap svg { width: 24px; height: 24px; color: var(--blue); transition: color 0.4s; }
+    .why-item:hover .why-icon-wrap svg { color: #fff; }
+    .why-item h4 {
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 4px;
+    }
+    .why-item-text p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+    .why-footer-text { text-align: center; margin-top: 56px; }
+    .why-footer-text p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 4px;
+    }
+    .why-footer-text strong {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    /* ===== FAQ ===== */
+    .faq { background: var(--off-white); }
+    .faq-split {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-left { position: sticky; top: 120px; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s;
+    }
+    .faq-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      color: var(--text-primary);
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--blue); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--off-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+    .faq-item.active .faq-icon {
+      background: var(--blue);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .faq-item.active .faq-answer { max-height: 200px; }
+    .faq-answer p {
+      padding: 0 28px 22px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .final-cta {
+      background: var(--dark);
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,127,235,0.08);
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .final-cta .container { position: relative; z-index: 2; }
+    .final-cta .section-title {
+      color: #fff;
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.5);
+      font-size: 18px;
+      max-width: 520px;
+      margin: 0 auto 44px;
+      line-height: 1.7;
+    }
+    .final-cta .btn-primary {
+      font-size: 18px;
+      padding: 22px 52px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      padding: 40px 0 28px;
+      text-align: center;
+    }
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 16px;
+      filter: invert(1);
+    }
+    .footer-logo img {
+      height: 50px;
+      width: auto;
+    }
+    .footer p { font-size: 13px; color: rgba(255,255,255,0.3); }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 900px) {
+      .hero { min-height: 70vh; }
+      .hero h1 { font-size: 36px; letter-spacing: -1.5px; }
+      .hero .container { padding: 0 24px; margin: 0; }
+      .hero-badges { flex-wrap: wrap; }
+      .intro { padding: 60px 0; }
+      .intro-content p:first-child { font-size: 20px; }
+      .intro-checks { gap: 20px; }
+      .ps-layout { grid-template-columns: 1fr; }
+      .timeline::before { left: 28px; }
+      .bento-grid { grid-template-columns: 1fr; }
+      .bento-card-wide { grid-column: span 1; flex-direction: column; gap: 20px; text-align: center; }
+      .why-layout { grid-template-columns: 1fr; gap: 40px; }
+      .why-photo { position: static; max-width: 380px; margin: 0 auto; }
+      .faq-split { grid-template-columns: 1fr; gap: 40px; }
+      .faq-left { position: static; }
+      .section-title { font-size: 36px; }
+      .final-cta .section-title { font-size: 36px; }
+    }
+    @media (max-width: 600px) {
+      .why-photo { max-width: 280px; }
+    }
+
+    /* ===== V2 OVERRIDES: dark -> light backgrounds, text inversion ===== */
+    .hero h1,
+    .process .section-title,
+    .why-us .section-title,
+    .process .section-label,
+    .timeline-content h3,
+    .bento-card-wide p,
+    .why-footer-text strong,
+    .why-item h4,
+    .ps-side.problem h3,
+    .final-cta .section-title { color: var(--text-primary); }
+
+    .hero-subtitle,
+    .hero-badge,
+    .process .section-subtitle,
+    .timeline-content p,
+    .process-note,
+    .why-footer-text p,
+    .why-item-text p,
+    .ps-side.problem .ps-list li,
+    .ps-note,
+    .footer p { color: var(--text-secondary); }
+
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle strong { color: var(--text-primary); }
+
+    .hero-badge {
+      background: rgba(0,0,0,0.06);
+      border-color: rgba(0,0,0,0.1);
+    }
+
+    .btn-outline {
+      color: var(--text-primary);
+      border-color: rgba(0,0,0,0.15);
+    }
+    .btn-outline:hover {
+      background: rgba(0,0,0,0.05);
+      border-color: rgba(0,0,0,0.25);
+    }
+
+    .ps-side.problem { color: var(--text-primary); }
+    .ps-side.problem .ps-side-label { color: #ff6b6b; }
+
+    .process { color: var(--text-primary); }
+
+    .timeline-dot {
+      background: rgba(0,0,0,0.04);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .timeline-item:hover .timeline-dot {
+      background: var(--blue);
+      color: #fff;
+    }
+    .timeline::before {
+      background: linear-gradient(to bottom, var(--blue), rgba(0,127,235,0.15));
+    }
+
+    .why-us { color: var(--text-primary); }
+    .why-us .section-label { color: var(--blue); }
+    .why-item {
+      border-color: rgba(0,0,0,0.06);
+    }
+    .why-item:hover { background: rgba(0,0,0,0.03); }
+    .why-icon-wrap { background: rgba(0,127,235,0.1); }
+    .why-icon-wrap svg { color: var(--blue); }
+    .why-item:hover .why-icon-wrap { background: var(--blue); }
+    .why-item:hover .why-icon-wrap svg { color: #fff; }
+    .why-item h4 { color: var(--text-primary); }
+    .why-item-text p { color: var(--text-secondary); }
+
+    .why-strip { border-color: rgba(0,0,0,0.06); }
+
+    .footer { border-top-color: rgba(0,0,0,0.06); }
+    .footer-logo { filter: none; }
+
+    .bento-card-wide { color: var(--text-primary); }
+    .bento-card-wide p { color: var(--text-secondary); }
+
+    .final-cta { color: var(--text-primary); }
+    .final-cta .section-subtitle { color: var(--text-secondary); }
+    .final-cta .section-label { color: var(--blue); }
+
+    .why-us::before { background: rgba(0,127,235,0.04); }
+    .process::before { background: radial-gradient(circle, rgba(0,127,235,0.04) 0%, transparent 70%); }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="hero-badge">Advocacia Empresarial</span>
+          <span class="hero-badge">Lisboa</span>
+        </div>
+        <h1>Abertura de empresa<br>em Portugal com<br><span class="gradient-text">seguran&ccedil;a jur&iacute;dica</span></h1>
+        <p class="hero-subtitle">Assessoria especializada em Lisboa para estruturar sua empresa com prote&ccedil;&atilde;o societ&aacute;ria e conformidade total com o <strong>Registo Comercial e RCBE</strong>.</p>
+        <div class="hero-buttons">
+          <a href="#cta-final" class="btn-primary">Falar com um Advogado Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-content reveal">
+        <p>Abrir empresa em Portugal &eacute; uma decis&atilde;o estrat&eacute;gica.</p>
+        <p>Mas a forma como ela nasce define o n&iacute;vel de prote&ccedil;&atilde;o que voc&ecirc; ter&aacute; nos pr&oacute;ximos anos.<br>Aqui, sua empresa &eacute; estruturada com contrato personalizado, defini&ccedil;&atilde;o correta do tipo societ&aacute;rio e enquadramento jur&iacute;dico adequado desde o primeiro ato.</p>
+        <div class="intro-checks">
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem improviso.
+          </span>
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem cl&aacute;usulas gen&eacute;ricas.
+          </span>
+          <span class="intro-check">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#03B01E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem riscos desnecess&aacute;rios.
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA E SOLUCAO -->
+  <section class="problem-solution">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Abrir empresa em Portugal<br>pode parecer simples.</h2>
+        <p class="section-subtitle">Mas decis&otilde;es equivocadas no pacto social, na defini&ccedil;&atilde;o do tipo societ&aacute;rio ou no enquadramento do RCBE geram:</p>
+      </div>
+      <div class="ps-layout reveal-scale">
+        <div class="ps-side problem">
+          <p class="ps-side-label">O problema</p>
+          <h3>Erros comuns que custam caro</h3>
+          <ul class="ps-list">
+            <li>Conflitos societ&aacute;rios futuros</li>
+            <li>Dificuldade de entrada de novos s&oacute;cios</li>
+            <li>Risco patrimonial desnecess&aacute;rio</li>
+            <li>Custos jur&iacute;dicos elevados para corre&ccedil;&atilde;o</li>
+          </ul>
+          <p class="ps-note">Muitos empres&aacute;rios percebem os erros apenas quando o problema j&aacute; est&aacute; instalado.</p>
+        </div>
+        <div class="ps-side solution">
+          <p class="ps-side-label">A solu&ccedil;&atilde;o</p>
+          <h3>A solu&ccedil;&atilde;o &eacute; estruturar corretamente desde o in&iacute;cio.</h3>
+          <p style="font-size:14px; color:var(--text-secondary); margin-bottom:24px;">Com assessoria jur&iacute;dica especializada, sua empresa nasce:</p>
+          <ul class="ps-list">
+            <li>Com contrato sob medida</li>
+            <li>Com prote&ccedil;&atilde;o patrimonial adequada</li>
+            <li>Em conformidade total com o Registo Comercial</li>
+            <li>Com RCBE corretamente declarado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ps-cta-row reveal">
+        <p style="color:var(--text-secondary); margin-bottom:20px;">Voc&ecirc; come&ccedil;a com seguran&ccedil;a.</p>
+        <a href="#cta-final" class="btn-primary">Quero Criar Minha Empresa com Seguran&ccedil;a Jur&iacute;dica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="process" id="processo">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Passo a Passo</p>
+        <h2 class="section-title">Como funciona o processo<br>de constitui&ccedil;&atilde;o</h2>
+        <p class="section-subtitle">Estrutura&ccedil;&atilde;o em 5 etapas estrat&eacute;gicas</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h3>Diagn&oacute;stico jur&iacute;dico inicial</h3>
+            <p>An&aacute;lise do seu perfil empresarial, objetivos e estrutura societ&aacute;ria ideal.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h3>Defini&ccedil;&atilde;o do Objeto, CAEs, Ger&ecirc;ncia e Capital Social</h3>
+            <p>Enquadramento correto da atividade e estrutura operacional.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h3>Reda&ccedil;&atilde;o do pacto social sob medida</h3>
+            <p>Contrato adaptado &agrave; realidade da empresa, n&atilde;o um modelo padr&atilde;o.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal reveal-delay-3">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h3>Registo Comercial e Declara&ccedil;&atilde;o do RCBE</h3>
+            <p>Formaliza&ccedil;&atilde;o completa com conformidade jur&iacute;dica.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal reveal-delay-4">
+          <div class="timeline-dot">5</div>
+          <div class="timeline-content">
+            <h3>Apoio na abertura da conta banc&aacute;ria</h3>
+            <p>Orienta&ccedil;&atilde;o estrat&eacute;gica para cumprimento das exig&ecirc;ncias banc&aacute;rias.</p>
+          </div>
+        </div>
+      </div>
+      <div class="process-cta reveal">
+        <a href="#cta-final" class="btn-primary">Solicitar Or&ccedil;amento de Abertura</a>
+        <p class="process-note">Processo conduzido com m&eacute;todo, clareza e previsibilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPOS DE SOCIEDADE -->
+  <section class="types">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Estrutura Societ&aacute;ria</p>
+        <h2 class="section-title">Tipos de Sociedade &mdash;<br>Escolha com Seguran&ccedil;a</h2>
+        <p class="section-subtitle">A escolha da estrutura societ&aacute;ria impacta diretamente na sua prote&ccedil;&atilde;o e crescimento futuro.</p>
+      </div>
+      <div class="bento-grid">
+        <div class="bento-card reveal">
+          <span class="type-tag">Individual</span>
+          <h3>Unipessoal por Quotas</h3>
+          <ul class="bento-list">
+            <li>Um &uacute;nico s&oacute;cio</li>
+            <li>Prote&ccedil;&atilde;o patrimonial</li>
+            <li>Estrutura simples e eficiente</li>
+          </ul>
+        </div>
+        <div class="bento-card reveal reveal-delay-1">
+          <span class="type-tag">Parceria</span>
+          <h3>Sociedade por Quotas (LDA)</h3>
+          <ul class="bento-list">
+            <li>Dois ou mais s&oacute;cios</li>
+            <li>Exige pacto social bem estruturado</li>
+            <li>Ideal para neg&oacute;cios familiares ou parcerias</li>
+          </ul>
+        </div>
+        <div class="bento-card reveal reveal-delay-2">
+          <span class="type-tag">Corporativo</span>
+          <h3>Sociedade Anonima (SA)</h3>
+          <ul class="bento-list">
+            <li>Estrutura para projetos maiores</li>
+            <li>Indicada para entrada de investidores</li>
+            <li>Modelo societ&aacute;rio mais complexo</li>
+          </ul>
+        </div>
+        <div class="bento-card bento-card-wide reveal">
+          <p>Cada estrutura exige an&aacute;lise individual. A escolha correta &eacute; o primeiro passo para proteger seu investimento.</p>
+          <a href="#cta-final" class="btn-primary">Quero orienta&ccedil;&atilde;o jur&iacute;dica para escolher</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Experi&ecirc;ncia e Confian&ccedil;a</p>
+        <h2 class="section-title">Depoimentos</h2>
+      </div>
+    </div>
+    <div class="testimonial-marquee">
+      <div class="testimonial-track">
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>Abri minha empresa em Lisboa com seguran&ccedil;a total. O contrato foi estruturado pensando no crescimento futuro.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-1">M</div>
+            <div><div class="t-card-name">Marcelo F.</div><div class="t-card-role">Empres&aacute;rio</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>T&iacute;nhamos receio de errar na escolha do tipo societ&aacute;rio. O acompanhamento jur&iacute;dico trouxe clareza e tranquilidade.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-2">P</div>
+            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">Socia Administradora</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>A estrutura&ccedil;&atilde;o correta evitou conflitos entre s&oacute;cios logo no in&iacute;cio.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-3">E</div>
+            <div><div class="t-card-name">Eduardo S.</div><div class="t-card-role">Investidor</div></div>
+          </div>
+        </div>
+        <!-- duplicados para loop infinito -->
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>Abri minha empresa em Lisboa com seguran&ccedil;a total. O contrato foi estruturado pensando no crescimento futuro.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-1">M</div>
+            <div><div class="t-card-name">Marcelo F.</div><div class="t-card-role">Empres&aacute;rio</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>T&iacute;nhamos receio de errar na escolha do tipo societ&aacute;rio. O acompanhamento jur&iacute;dico trouxe clareza e tranquilidade.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-2">P</div>
+            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">Socia Administradora</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-card-quote">&ldquo;</div>
+          <p>A estrutura&ccedil;&atilde;o correta evitou conflitos entre s&oacute;cios logo no in&iacute;cio.</p>
+          <div class="t-card-author">
+            <div class="t-card-avatar av-3">E</div>
+            <div><div class="t-card-name">Eduardo S.</div><div class="t-card-role">Investidor</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE ESCOLHER -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Diferenciais</p>
+        <h2 class="section-title">Por que nos escolher?</h2>
+      </div>
+      <div class="why-layout">
+        <div class="why-photo reveal">
+          <img src="images/expert.jpg" alt="Dr. Rodrigo Maranh&atilde;o — Advogado em Lisboa">
+        </div>
+        <div class="why-items">
+          <div class="why-item reveal reveal-delay-1">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Escrit&oacute;rio f&iacute;sico em Lisboa</h4>
+              <p>Presen&ccedil;a local para resolver quest&otilde;es presenciais com agilidade.</p>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-2">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Atendimento personalizado e pr&oacute;ximo</h4>
+              <p>Cada cliente recebe aten&ccedil;&atilde;o individual e comunica&ccedil;&atilde;o direta.</p>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-3">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Experi&ecirc;ncia com empresas e investidores estrangeiros</h4>
+              <p>Conhecimento pr&aacute;tico em opera&ccedil;&otilde;es internacionais e imigra&ccedil;&atilde;o empresarial.</p>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-4">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Riscos jur&iacute;dicos mitigados desde a constitui&ccedil;&atilde;o</h4>
+              <p>Estrutura&ccedil;&atilde;o preventiva para evitar problemas futuros.</p>
+            </div>
+          </div>
+          <div class="why-item reveal reveal-delay-4">
+            <div class="why-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Condu&ccedil;&atilde;o estrat&eacute;gica em todas as etapas</h4>
+              <p>Acompanhamento completo do in&iacute;cio ao funcionamento da empresa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-footer-text reveal">
+        <p>Aqui, voc&ecirc; n&atilde;o recebe apenas informa&ccedil;&atilde;o.</p>
+        <strong>Recebe dire&ccedil;&atilde;o clara e estrutura jur&iacute;dica s&oacute;lida.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="faq-split">
+        <div class="faq-left reveal">
+          <p class="section-label">D&uacute;vidas</p>
+          <h2 class="section-title">Perguntas<br>Frequentes</h2>
+          <p class="section-subtitle">As principais d&uacute;vidas de quem est&aacute; constituindo empresa em Portugal.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item active reveal">
+            <button class="faq-question">
+              Quanto tempo demora a constitui&ccedil;&atilde;o?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O prazo pode variar conforme o tipo societ&aacute;rio e a prepara&ccedil;&atilde;o documental. Em regra, ap&oacute;s defini&ccedil;&atilde;o estrat&eacute;gica e documenta&ccedil;&atilde;o completa, o processo &eacute; c&eacute;lere.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question">
+              Posso abrir empresa &agrave; dist&acirc;ncia?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Sim. &Eacute; poss&iacute;vel estruturar a constitui&ccedil;&atilde;o com representa&ccedil;&atilde;o adequada e condu&ccedil;&atilde;o jur&iacute;dica estrat&eacute;gica.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question">
+              Quais s&atilde;o os custos envolvidos?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Os custos variam conforme o tipo de sociedade, capital social e necessidades espec&iacute;ficas. O or&ccedil;amento &eacute; apresentado de forma transparente ap&oacute;s diagn&oacute;stico inicial.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question">
+              E se eu j&aacute; tiver contrato social pronto?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>O contrato pode ser revisado juridicamente antes do registo. Essa etapa &eacute; essencial para evitar cl&aacute;usulas gen&eacute;ricas ou riscos futuros.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta" id="cta-final">
+    <div class="final-cta-glow"></div>
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title">Estruture corretamente<br>desde o primeiro passo.</h2>
+        <p>A constitui&ccedil;&atilde;o da sua empresa n&atilde;o &eacute; apenas um ato formal. &Eacute; a base jur&iacute;dica que sustentar&aacute; o seu crescimento em Portugal.</p>
+        <a href="#" class="btn-primary">Iniciar Constitui&ccedil;&atilde;o da Empresa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><img src="images/logo.png" alt="Rodrigo Maranh&atilde;o Advogado"></div>
+      <p>VMA Advogados &mdash; Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal, .reveal-scale').forEach(el => observer.observe(el));
+
+    // FAQ
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
