@@ -808,8 +808,40 @@
     .footer {
       background: var(--dark);
       border-top: 1px solid rgba(255,255,255,0.04);
-      padding: 40px 0 28px;
-      text-align: center;
+      padding: 56px 0 28px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    .footer-col p, .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      text-decoration: none;
+    }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-map {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-map iframe {
+      width: 100%;
+      height: 180px;
+      border: 0;
+      display: block;
     }
     .footer-logo {
       display: inline-block;
@@ -820,7 +852,15 @@
       height: 50px;
       width: auto;
     }
-    .footer p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
 
     /* ===== RESPONSIVO ===== */
     @media (max-width: 900px) {
@@ -859,7 +899,7 @@
           <span class="hero-badge">Lisboa</span>
         </div>
         <h1>Abertura de empresa<br>em Portugal com<br><span class="gradient-text">seguran&ccedil;a jur&iacute;dica</span></h1>
-        <p class="hero-subtitle">Assessoria especializada em Lisboa para estruturar sua empresa com prote&ccedil;&atilde;o societ&aacute;ria e conformidade total com o <strong>Registo Comercial e RCBE</strong>.</p>
+        <p class="hero-subtitle">Assessoria jur&iacute;dica em Lisboa para estruturar sua empresa com prote&ccedil;&atilde;o societ&aacute;ria e conformidade total com o <strong>Registo Comercial e RCBE</strong>.</p>
         <div class="hero-buttons">
           <a href="#cta-final" class="btn-primary">Falar com um Advogado Agora</a>
         </div>
@@ -986,7 +1026,7 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-label">Estrutura Societ&aacute;ria</p>
-        <h2 class="section-title">Tipos de Sociedade &mdash;<br>Escolha com Seguran&ccedil;a</h2>
+        <h2 class="section-title">Tipos de Sociedade<br>Escolha com Seguran&ccedil;a</h2>
         <p class="section-subtitle">A escolha da estrutura societ&aacute;ria impacta diretamente na sua prote&ccedil;&atilde;o e crescimento futuro.</p>
       </div>
       <div class="bento-grid">
@@ -1000,7 +1040,7 @@
           </ul>
         </div>
         <div class="bento-card reveal reveal-delay-1">
-          <span class="type-tag">Parceria</span>
+          <span class="type-tag">Coletiva</span>
           <h3>Sociedade por Quotas (LDA)</h3>
           <ul class="bento-list">
             <li>Dois ou mais s&oacute;cios</li>
@@ -1009,8 +1049,8 @@
           </ul>
         </div>
         <div class="bento-card reveal reveal-delay-2">
-          <span class="type-tag">Corporativo</span>
-          <h3>Sociedade Anonima (SA)</h3>
+          <span class="type-tag">Corporativa</span>
+          <h3>Sociedade An&ocirc;nima (SA)</h3>
           <ul class="bento-list">
             <li>Estrutura para projetos maiores</li>
             <li>Indicada para entrada de investidores</li>
@@ -1048,7 +1088,7 @@
           <p>T&iacute;nhamos receio de errar na escolha do tipo societ&aacute;rio. O acompanhamento jur&iacute;dico trouxe clareza e tranquilidade.</p>
           <div class="t-card-author">
             <div class="t-card-avatar av-2">P</div>
-            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">Socia Administradora</div></div>
+            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">S&oacute;cia Administradora</div></div>
           </div>
         </div>
         <div class="t-card">
@@ -1073,7 +1113,7 @@
           <p>T&iacute;nhamos receio de errar na escolha do tipo societ&aacute;rio. O acompanhamento jur&iacute;dico trouxe clareza e tranquilidade.</p>
           <div class="t-card-author">
             <div class="t-card-avatar av-2">P</div>
-            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">Socia Administradora</div></div>
+            <div><div class="t-card-name">Patr&iacute;cia R.</div><div class="t-card-role">S&oacute;cia Administradora</div></div>
           </div>
         </div>
         <div class="t-card">
@@ -1094,6 +1134,7 @@
       <div class="section-header reveal">
         <p class="section-label">Diferenciais</p>
         <h2 class="section-title" style="color:#fff;">Por que nos escolher?</h2>
+        <p class="section-subtitle">O Escrit&oacute;rio Vilanova Maranh&atilde;o Advogados atua na constitui&ccedil;&atilde;o e estrutura&ccedil;&atilde;o jur&iacute;dica de empresas em Portugal.</p>
       </div>
       <div class="why-layout">
         <div class="why-photo reveal">
@@ -1220,8 +1261,39 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-logo"><img src="images/logo.png" alt="Rodrigo Maranh&atilde;o Advogado"></div>
-      <p>VMA Advogados &mdash; Todos os direitos reservados.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo"><img src="images/logo.png" alt="Vilanova Maranh&atilde;o Advogados"></div>
+          <p>Vilanova Maranh&atilde;o Advogados &mdash; Assessoria jur&iacute;dica especializada na constitui&ccedil;&atilde;o e estrutura&ccedil;&atilde;o de empresas em Portugal.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Localiza&ccedil;&atilde;o</h4>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.3!2d-9.15!3d38.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQzJzEyLjAiTiA5wrAwOScwMC4wIlc!5e0!3m2!1spt-PT!2spt!4v1" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <p>[ENDERECO_DO_ESCRITORIO]<br>Lisboa, Portugal</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>
+            <strong>E-mail:</strong><br>
+            <a href="mailto:[EMAIL]">[EMAIL]</a>
+          </p>
+          <br>
+          <p>
+            <strong>Inscri&ccedil;&atilde;o na Ordem dos Advogados:</strong><br>
+            C&eacute;dula Profissional n.&ordm; [NUMERO_OA]
+          </p>
+          <br>
+          <p>
+            <strong>NIF:</strong> [NIF_SOCIEDADE]<br>
+            <strong>Forma jur&iacute;dica:</strong> Sociedade de Advogados, RL
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vilanova Maranh&atilde;o Advogados &mdash; Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 
