@@ -260,11 +260,16 @@ const wpOverrides = `
 
 /* ===== RESPONSIVE — MOBILE ===== */
 @media (max-width: 900px) {
-  /* Hero mobile */
-  .elementor-widget-html .hero { min-height: auto !important; padding: 100px 0 60px !important; }
-  .elementor-widget-html .hero h1 { font-size: 36px !important; letter-spacing: -1.5px !important; line-height: 1.12 !important; }
-  .elementor-widget-html .hero .container { padding: 0 24px !important; }
+  /* Hero mobile — background com expert */
+  .elementor-widget-html .hero { min-height: auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; }
+  .elementor-widget-html .hero-bg {
+    background-image: url('https://rodrigomaranhao.com/wp-content/uploads/2026/03/mobile.png') !important;
+    background-position: top center !important;
+    background-size: cover !important;
+  }
+  .elementor-widget-html .hero .container { padding: 380px 24px 60px !important; position: relative !important; z-index: 2 !important; }
   .elementor-widget-html .hero-content { max-width: 100% !important; }
+  .elementor-widget-html .hero h1 { font-size: 36px !important; letter-spacing: -1.5px !important; line-height: 1.12 !important; }
   .elementor-widget-html .hero-subtitle { margin-bottom: 32px !important; }
   .elementor-widget-html .hero-buttons .btn-primary { padding: 16px 32px !important; font-size: 15px !important; white-space: nowrap !important; }
 
@@ -325,6 +330,7 @@ const wpOverrides = `
 }
 
 @media (max-width: 600px) {
+  .elementor-widget-html .hero .container { padding: 320px 20px 48px !important; }
   .elementor-widget-html .hero h1 { font-size: 30px !important; }
   .elementor-widget-html .section-title { font-size: 28px !important; }
   .elementor-widget-html .why-photo { max-width: 240px !important; }
