@@ -263,7 +263,7 @@ const wpOverrides = `
   /* Hero mobile — background com expert */
   .elementor-widget-html .hero { min-height: auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; }
   .elementor-widget-html .hero-bg {
-    background-image: url('https://rodrigomaranhao.com/wp-content/uploads/2026/03/mobile.png') !important;
+    background-image: url('https://rodrigomaranhao.com/wp-content/uploads/2026/03/mobile-scaled.png') !important;
     background-position: top center !important;
     background-size: cover !important;
   }
